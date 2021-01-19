@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+haters/
+.cache/
+dist/
+npm-debug.log
+.env
