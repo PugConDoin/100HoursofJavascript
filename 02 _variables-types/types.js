@@ -8,67 +8,105 @@ O - Object
 B - Boolean
 N - Null 
 U - Undefined
-S - 
+S - Symbol
 
-// #################
-// #### STRINGS ####
-// #################
+/*########################
+### Types of variables ###
+########################## 
+String
+Number
+Object
+Boolean
+Null
+Undefined
+Symbol
 
-Use backticks, double quotes or single quotes
-Escape javascript syntax with a backslash eg 'she\'s'
+/*#######################
+####### STRINGS #########
+#######################*/
 
-const name = 'mark';
-const middle = "nitecoda";
-const last = `freeman`;
+const firstName = 'Mark'; // contained withgin single quotes,
+const lastName = "Freeman"; // double quotes, or
+const nickName = `nitecoda`; // backticks
 
-const sentence = "shes's so \"cool\"";
-const sentence2 = `shes's so "cool"`;
+// apostrophes, quotation marks and special characters inside a string may need escaping 
+// with a backslash \
+const sentence = "Trump was a 'great' President"; //combining quote styles
+const sentence2 = 'Boris is a "solid" leader'; // opening and closing apostrophes must match 
+const sentence3 = "The English weather is \"Cool\""; // escape apostrophes if not combining
+const multiLine = `This is a multi-
+line sentence and my brother says
+"it's a really easy
+way to write 
+strings"`; // backticks `` make life a lot easier and we can write across multiple lines
+// good for when we use JS later to create HTML in a familiar style
 
-const song = `Ohhh
+// we can combine string variables using the + operator
+// even within declaring it
+let hello = 'hello, my name is ' + firstName + ". Nice to meet you"; // we've updated the value of hello later so we'll use let
 
-ya
+let hello2 = 'Hey there! You can call me '; // we'll update this variable too, so let
+hello2 = hello2 + firstName; // update value of hello2
+hello2 = hello2 + '. Nice to meet you'; //update hello2 again
 
-I like
-pizza`;
+// we can pass variables into strings inside ${}. We can also run calcs using ${}
+hello = `hello my name is ${firstName} ${hello2}. I am ${1 + 100} years old`;
 
-const hello = 'hello my name is ' + name + ". Nice to meet you";
-
-let hello2 = 'hello my name is ';
-hello2 = hello2 + name;
-hello2 = hello2 + ' Nice to meet you';
-
-const hello = `hello my name is ${name}. Nice to meet you. I am ${1 + 100} years old`;
-
-const html = `
+const someHtml = `
   <div>
-    <h2>${name}</h2>
-    <p>${hello}</p>
+    <h2>${hello2}</h2>
+    <p>${nickName}</p>
   </div>
 `;
+// notice how the the above someHtml takes in multiple variables on different lines,
+// and how these variables cascade through the updates of their values
 
-document.body.innerHTML = html;
+// we can actually use the variable someHtml to create some HTML elements in the DOM
+document.body.innerHTML = someHtml
+// and this will translate to web page in the browser for the user. Pretty cool.
 
+const javaSCript = `pretty cool, eh?!`;
 
-// using typeof in front of something will let us know what type of variable it is 
+/*#######################
+####### NUMBERS #########
+#######################*/
 
-// #################
-// #### STRINGS ####
-// #################
+const age = 21; // a number does not take in apostrophes
+const sport = 'football'; // string do
+const favoriteNumber = '10' // is a string, it is not a number, because of the apostrophes
 
-// const age = 100.5;
-// const name = 'wes';
+console.log(typeof age); // will output number to the console 
+console.log(typeof favoriteNumber); // will output string to the console 
 
-// const a = 10;
-// const b = 20;
+//Arithmatic operators
+/* 
 
-#### Run calcs in Javascript #### 
++   Addition
+-   Subtraction
+*   Multiplication   
+/   Division
+**  Exponential
+%   Modulus (division remainder)
+++  Increment
+--  Decrement
 
-Add +
-Subtract -
-Multilpy *
-Divide /
-Modulo % = remainder after integer division
-Power **
+*/
+
+const a = 10;
+const b = 20;
+const c = 2;
+const d = 3;
+let e = 1; // this value gets incremented later so must be let 
+let f = 7;
+
+const addition = a + b;
+const subtraction = a - b;
+const multiplication = a * b;
+const division = b / a;
+const exponential = a ** c;
+const modulus = a % d;
+const increment = e++; // increment
+const decrement = --f;// a--; // decrement
 
 #### Use Helper Methods to #### 
 
