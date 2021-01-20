@@ -108,7 +108,7 @@ const modulus = a % d;
 const increment = e++; // increment
 const decrement = --f;// a--; // decrement
 
-#### Use Helper Methods to #### 
+// #### Use Helper Methods to #### 
 
 Math.round = rounds up or down based on number
 Math.floor = always rounds down
@@ -124,15 +124,15 @@ const dadGets = smarties % kids;
 console.log(`Each kids gets ${eachKidGets}`);
 
 const price = 1034;
-*/
 
-// #################
-// #### OBJECTS ####
-// #################
-/*
+
+/*#################
+##### OBJECTS #####
+#################*/
+
 // Biggest building blocks in JS
-// A collection of properties and values
-//
+//A collection of properties and values
+
 const person = {
   first: 'mark',
   last: 'freenab',
@@ -140,13 +140,13 @@ const person = {
 };
 
 // access properties and values using:
-// person.first
-// person.last
-//person.age
+person.first
+person.last
+person.age
 
-// ####################
-// # NULL & UNDEFINED #
-// ####################
+/*####################
+## NULL & UNDEFINED ##
+####################*/
 
 // NULL - value of completely nothing, explicitly set to NULL
 // UNDEFINED - has no value - occurs if you try to call a variable that has no value
@@ -156,7 +156,7 @@ console.log(dog); = UNDEFINED we've named a value but not defined a value
 dog = 'snickers'; = UNDEFINED beacuse we've named a variable bu haven't set the variable
 
 
-let somethingUndefined; #note: this has to be let because cannot const a variable that has no value
+let somethingUndefined; //note: this has to be let because cannot const a variable that has no value
 const somethingNull = null;
 
 const cher = {
@@ -180,21 +180,21 @@ teller.last = null; //explicity set to NULL
 
 // We use Booleans to test if something is true or false
 
-// let isDrawing = false;
-// let age = 18;
-// const ofAge = age > 19; 
-// console.log(ofAge); //returns false
+let isDrawing = false;
+let age = 18;
+const ofAge = age > 19; 
+console.log(ofAge); //returns false
 
-// Getting Booleans through Equality - teting if smthg is TRUE or FALSE
+// Booleans results through Equality - teting if smthg is TRUE or FALSE
 // Almost always use triple ===, not double == as this tests for type as well
 // === gives a true equality 
-// 10 = 10
+//10 = 10
 //'10' is double == to 10
 //but
 //'10' does not triple === 10
 // age = 100;
 // let age2 = 100;
 
-// We'll use BOOLEAN and eEQUALITY a lot in flow control
+// We'll use BOOLEAN and EQUALITY a lot in flow control
 
 
