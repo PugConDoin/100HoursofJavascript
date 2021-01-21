@@ -1,15 +1,3 @@
-// use eslint-disable to prevent eslint changing code
-/* eslint-disable */
-/*
-
-S - String
-N - Number
-O - Object
-B - Boolean
-N - Null 
-U - Undefined
-S - Symbol
-
 /*########################
 ### Types of variables ###
 ########################## 
@@ -149,11 +137,12 @@ person.age
 ####################*/
 
 // NULL - value of completely nothing, explicitly set to NULL
-// UNDEFINED - has no value - occurs if you try to call a variable that has no value
+// UNDEFINED - is returned if a propety has no value, for example;  
+// if you try to call the value of an object or a variable that has none value
 
-let dog; 
-console.log(dog); = UNDEFINED we've named a value but not defined a value
-dog = 'snickers'; = UNDEFINED beacuse we've named a variable bu haven't set the variable
+let dog;            // we've declared a variable without a value, returns;
+console.log(dog); = // UNDEFINED we've named a variable but not defined its value
+cat = 'whiskers'; = // UNDEFINED beacuse we've named a variable bu haven't set the variable
 
 
 let somethingUndefined; //note: this has to be let because cannot const a variable that has no value
@@ -163,7 +152,7 @@ const cher = {
   first: 'cher'
 };
 
-//last name is indefined, doesn't exist.
+//last name is indefined, it doesn't exist, so we can't call for it without getting undefined.
 
 const teller = {
   first: 'Raymond',
@@ -171,30 +160,33 @@ const teller = {
 }
 
 teller.first = 'Teller';
-teller.last = null; //explicity set to NULL
+teller.last = null; //explicity set to NULL, will return NULL
 
-*/
 // #################
 // #### BOOLEAN ####
 // #################
 
-// We use Booleans to test if something is true or false
+// We use Booleans to test if something is true or false, the respone is only ever true or false
 
-let isDrawing = false;
+let isDrawing = false; // we can set a value as false
 let age = 18;
-const ofAge = age > 19; 
+const ofAge = age > 19; // test value with operators
 console.log(ofAge); //returns false
 
-// Booleans results through Equality - teting if smthg is TRUE or FALSE
-// Almost always use triple ===, not double == as this tests for type as well
+// We use operators such as comparison operators to retrieve Booleans results
+// for example testing for EQUALITY - teting if smthg is TRUE or FALSE
+
+// #### EQUALITY ####
+
+// We should almost always use triple ===, not double ==.
+// triple === will test value for equality by data and type as well
 // === gives a true equality 
-//10 = 10
-//'10' is double == to 10
+
+// 10 = 10 
+// '10' is double == to 10
 //but
-//'10' does not triple === 10
-// age = 100;
-// let age2 = 100;
+//'10' is not triple === to 10 because '10' is a string and 10 is a number
+let age1 = 100;
+let age2 = '100';
 
 // We'll use BOOLEAN and EQUALITY a lot in flow control
-
-
